@@ -1,42 +1,20 @@
-#
-# Be sure to run `pod lib lint react-native-slide.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
+version = '3.0.3'
+source = { :git => 'https://github.com/react-native-community/react-native-slider.git', :tag => "v#{version}"}
 
 Pod::Spec.new do |s|
-  s.name             = 'react-native-slide'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of react-native-slide.'
+  s.name         = "react-native-slider"
+  s.version      = version
+  s.summary      = "React Native component used to select a single value from a range of values."
+  s.license      = "MIT"
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.authors      = "react-native-community"
+  s.homepage     = "https://github.com/react-native-community/react-native-slider"
+  s.platform     = :ios, "9.0"
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.source       = source
+  s.static_framework = true
 
-  s.homepage         = 'https://github.com/oceanfive/react-native-slide'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'oceanfive' => '849638313@qq.com' }
-  s.source           = { :git => 'https://github.com/oceanfive/react-native-slide.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source_files  = "src/ios/**/*.{h,m}"
 
-  s.ios.deployment_target = '9.0'
-
-  s.source_files = 'react-native-slide/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'react-native-slide' => ['react-native-slide/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'React'
 end

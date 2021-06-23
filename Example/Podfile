@@ -1,6 +1,0 @@
-use_frameworks!
-target 'react-native-slide_Tests' do
-  pod 'react-native-slide', :path => '../'
-  
-  
-end
